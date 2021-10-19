@@ -22,7 +22,7 @@ $(NAME): $(OBJS)
 	@$(AR) $(NAME) $(OBJS)
 	@echo "Linked"
 
-$(OBJS): $(SOURCES)
+%.o:%.c
 	@$(CC) $(CFLAGS) -c $(SOURCES)
 	@echo "Compiled"
 
