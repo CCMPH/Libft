@@ -141,6 +141,43 @@ int main(void)
 	printf("ft_calloc\t = %s\n", ft_calloc(10, 5));
     printf("calloc\t\t = %s\n\n", calloc(10, 5));
 
+	printf("\nTest strdup\n***********************\n");
+	const char s7[15] = "Hello";
+	printf("ft_strdup\t = %s\n", ft_strdup(s7));
+    printf("strdup\t\t = %s\n\n", strdup(s7));
+
+	printf("\nTest substr\n***********************\n");
+	const char s8[15] = "Hello World";
+	printf("ft_substr\t = %s\n", ft_substr(s8, 5, 7));
+
+	printf("\nTest strjoin\n***********************\n");
+	const char s9[15] = "Hello";
+	const char s10[15] = "World";
+	printf("ft_strjoin\t = %s\n", ft_strjoin(s9, s10));
+   
+   	printf("\nTest strtrim\n***********************\n");
+	const char s11[15] = "lala.halal.la";
+	const char s12[15] = "la";
+	printf("ft_strtrim\t = %s\n", ft_strtrim(s11, s12));
+
+	printf("\nTest ft_putchar_fd\n***********************\n");
+	printf("Geen main gemaakt\n\n");
+
+	printf("\nTest ft_putstr_fd\n***********************\n");
+	printf("Geen main gemaakt\n\n");
+
+	printf("\nTest ft_putendl_fd\n***********************\n");
+	printf("Geen main gemaakt\n\n");
+
+	printf("\nTest ft_putnbr_fd\n***********************\n");
+	printf("Geen main gemaakt\n\n");
+
+	printf("\nTest ft_strmapi\n***********************\n");
+	printf("Geen main gemaakt\n\n");
+
+	printf("\nTest ft_striteri\n***********************\n");
+	printf("Geen main gemaakt\n\n");
+
 	testing_functions();
 	return(0);
 }
