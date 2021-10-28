@@ -16,9 +16,13 @@ SOURCES = ft_atoi.c ft_bzero.c ft_calloc.c \
 	ft_strjoin.c ft_strtrim.c ft_split.c \
 	ft_itoa.c ft_strmapi.c ft_striteri.c \
 	ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c \
-	ft_putnbr_fd.c
+	ft_putnbr_fd.c ft_lstnew_bonus.c ft_lstadd_front_bonus.c \
+	ft_lstsize_bonus.c
+
+#BONUS_SOURCES = 
 
 OBJS = $(SOURCES:.c=.o)
+#BONUS_OBJS = $(BONUS_SOURCES:.c=.o)
 
 all: $(NAME)
 
