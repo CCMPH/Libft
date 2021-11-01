@@ -5,7 +5,7 @@ char	*ft_strchr(const char *s, int c)
 	char	*str;
 
 	str = (char *)s;
-	while (*str != c)
+	while (*str != (unsigned char)c)
 	{
 		if (*str == '\0')
 		{

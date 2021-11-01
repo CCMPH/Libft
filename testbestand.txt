@@ -1,5 +1,0 @@
-	printf("\nTest calloc\n***********************\n");
-	char s3[15] = "aBCDEF";
-	char s4[15] = "aææææ";
-	printf("ft_calloc(s)\t = %d\n", ft_calloc(s3, s4, 4));
-    printf("calloc(s)\t = %d\n\n", calloc(s3, s4, 4));

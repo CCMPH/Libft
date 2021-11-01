@@ -8,6 +8,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 	if (!s)
 		return (NULL);
+	if (len > (size_t)ft_strlen(s))
+		len = (size_t)ft_strlen(s);
 	str = malloc(sizeof(*s) * (len + 1));
 	if (!str)
 		return (NULL);

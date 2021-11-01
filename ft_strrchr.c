@@ -9,7 +9,7 @@ char	*ft_strrchr(const char *s, int c)
 		return (ft_strchr(s, c));
 	while (*s != '\0')
 	{
-		if (*s == c)
+		if (*s == (unsigned char)c)
 			last = s;
 		s++;
 	}
