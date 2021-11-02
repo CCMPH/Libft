@@ -26,23 +26,28 @@ BONUS_FILES = ft_lstnew_bonus.c ft_lstadd_front_bonus.c \
 OBJS = $(FILES:.c=.o)
 BONUS_OBJS = $(BONUS_FILES:.c=.o)
 
+ifdef BONUS
+RELEVANT_OBJS = $(OBJS) $(BONUS_OBJS)
+else
+RELEVANT_OBJS = $(OBJS)
+endif
+
 all: $(NAME)
 
-$(NAME): $(OBJS)
-	@$(AR) $(NAME) $(OBJS)
-	@echo "Linked $@"
+$(NAME): $(RELEVANT_OBJS)
+	@$(AR) $(NAME) $(RELEVANT_OBJS)
+	@echo "Create archive file $@"
 
 %.o:%.c libft.h
 	@$(CC) $(CFLAGS) -c $<
-	@echo "Compiled $@"
+	@echo "Compiling $@"
 
-bonus: $(BONUS_OBJS)
-	@$(AR) $(NAME) $(BONUS_OBJS)
-	@echo "Bonus Linked $@"
+bonus: 
+	@$(MAKE) BONUS=1
 
 clean:
 	@$(RM) $(OBJS) $(BONUS_OBJS)
-	@echo "All OBJS deleted"
+	@echo "Removing object files"
 
 normi: $(FILES)
 	norminette $(FILES)
@@ -52,7 +57,7 @@ normib:	$(BONUS_FILES)
 
 fclean: clean
 	@$(RM) $(NAME)
-	@echo "Outputfile deleted"
+	echo "Removing archive file"
 
 re: fclean all
 
